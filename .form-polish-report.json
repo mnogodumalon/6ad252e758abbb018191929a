@@ -1,0 +1,119 @@
+{
+  "entities": {
+    "Kunden": {
+      "placeholders_set": 11,
+      "defaults_keys": [
+        "aktiv"
+      ],
+      "computed_keys": [],
+      "reason": "Pure master data without numeric fields, so no formulas; only the active flag defaults to true."
+    },
+    "Kundenanfragen": {
+      "placeholders_set": 24,
+      "defaults_keys": [
+        "eingangsdatum",
+        "status",
+        "zieltermin_klaerung",
+        "gewuenschte_menge"
+      ],
+      "computed_keys": [
+        "_gesamt_minuten"
+      ],
+      "reason": "Summe der drei Minutenfelder als virtuelle Gesamtzeit, da keine Preise oder Datumspaare für eine Dauer vorliegen."
+    },
+    "Abschluss und Übergabe": {
+      "placeholders_set": 9,
+      "defaults_keys": [
+        "pruefdatum",
+        "uebergabestatus",
+        "freigabestatus"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formeln, da das Formular nur Prüf- und Übergabedaten ohne eigene Zahlenfelder oder Datumspaare enthält."
+    },
+    "Informationsquellen": {
+      "placeholders_set": 13,
+      "defaults_keys": [
+        "eingang_am",
+        "extraktionsstatus"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formeln, da es nur Stammdaten und Dokumentenverwaltung ohne Zahlenkette oder Datumspaar gibt."
+    },
+    "Technische Anforderungen": {
+      "placeholders_set": 17,
+      "defaults_keys": [
+        "gueltig_ab",
+        "pruefstatus"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formel, da die Werte technische Sollgrenzen sind und kein Betrag, keine Menge oder Dauer berechnet werden kann; gueltig_ab/gueltig_bis ergeben keine sinnvolle Dauer."
+    },
+    "Offene Punkte": {
+      "placeholders_set": 15,
+      "defaults_keys": [
+        "status",
+        "faellig_am",
+        "prioritaet"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formeln, da keine eigenen numerischen Felder oder Datumspaare vorliegen, nur Defaults für Status, Priorität und Fälligkeit."
+    },
+    "Aufgaben": {
+      "placeholders_set": 13,
+      "defaults_keys": [
+        "status",
+        "prioritaet",
+        "faellig_am"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formeln, da die Aufgabe keine eigenen Zahlenfelder oder Datumspaare hat und die Kennzahlen der Anfrage nicht pro Aufgabe verrechnet werden."
+    },
+    "Beurteilungen": {
+      "placeholders_set": 15,
+      "defaults_keys": [
+        "erstellt_am",
+        "pruefstatus"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formeln, da es sich um eine qualitative Beurteilung ohne eigene numerische Felder oder Datumspaar handelt."
+    },
+    "Rückfragen und Kommunikation": {
+      "placeholders_set": 16,
+      "defaults_keys": [
+        "versandstatus",
+        "antwortstatus",
+        "antwort_erwartet_bis"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formeln, da das Formular keine eigenen numerischen Felder hat und die Kennzahlen der Kundenanfrage nicht zu einer sinnvollen Berechnung führen."
+    },
+    "Entscheidungen": {
+      "placeholders_set": 16,
+      "defaults_keys": [
+        "entscheidungsstatus",
+        "entscheidungsdatum"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formeln, da keine Zahlenfelder oder Datumspaare zur Berechnung vorhanden sind und die Lookup-Werte nur über Mehrfachauswahl oder Kundenanfrage erreichbar sind."
+    },
+    "Erfahrungen und Erkenntnisse": {
+      "placeholders_set": 23,
+      "defaults_keys": [
+        "bestaetigungsstatus",
+        "gueltig_ab",
+        "wiederverwendungsstatus"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formeln, da der Eintrag reine Wissensdokumentation ohne eigene numerische Felder ist und das Datumspaar nur Gültigkeit beschreibt."
+    },
+    "Wiederverwendung von Erfahrungen": {
+      "placeholders_set": 12,
+      "defaults_keys": [
+        "bewertet_am"
+      ],
+      "computed_keys": [],
+      "reason": "Keine Formel, da es kein Datumspaar und keinen Preis gibt und die Aufwandswerte Schätzung und Beobachtung unabhängig voneinander erfasst werden."
+    }
+  }
+}
