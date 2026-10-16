@@ -20,6 +20,7 @@
 import type { ComponentType } from 'react';
 
 // <custom:intent-imports>
+import { IconInbox, IconListCheck, IconAlertTriangle, IconMessageQuestion, IconScale, IconCircleCheck } from '@tabler/icons-react';
 // </custom:intent-imports>
 
 export interface IntentLink {
@@ -42,6 +43,12 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
+  { path: '/intents/anfrage-aufnehmen', label: { de: 'Anfrage aufnehmen', en: 'Record inquiry' }, icon: IconInbox, description: 'Kunde wählen, Anfrage mit Beschreibung erfassen, erste Quelle zuordnen und Verantwortlichen bestimmen.' },
+  { path: '/intents/anforderung-erfassen', label: { de: 'Anforderung erfassen', en: 'Capture requirement' }, icon: IconListCheck, description: 'Technische Anforderung zu einer Anfrage anlegen, mit Quellen verknüpfen und Anfrage in Prüfung setzen.' },
+  { path: '/intents/offenen-punkt-anlegen', label: { de: 'Offenen Punkt mit Aufgabe anlegen', en: 'Create open item with task' }, icon: IconAlertTriangle, description: 'Klärungsbedarf als offenen Punkt erfassen, Anforderungen und Quellen verknüpfen, Aufgabe zuweisen.' },
+  { path: '/intents/rueckfrage-vorbereiten', label: { de: 'Rückfrage vorbereiten', en: 'Prepare query' }, icon: IconMessageQuestion, description: 'Rückfrage als Entwurf zu einem oder mehreren offenen Punkten formulieren; kein Versand, Punkt wartet auf Kunde.' },
+  { path: '/intents/beurteilung-und-entscheidung', label: { de: 'Beurteilung und Entscheidung dokumentieren', en: 'Document assessment and decision' }, icon: IconScale, description: 'Fachliche Beurteilung als Entwurf erfassen und eine Entscheidung dazu vorbereiten. Die Entscheidung trifft eine Person.' },
+  { path: '/intents/klaerung-abschliessen', label: { de: 'Klärung abschließen und übergeben', en: 'Close clarification and hand over' }, icon: IconCircleCheck, description: 'Voraussetzungen prüfen, Abschluss mit Risiken und Übergabe dokumentieren und die Anfrage auf Technisch geklärt setzen. Keine automatische Freigabe.' },
   // </custom:intents>
 ];
 
@@ -52,7 +59,7 @@ export const INTENTS: IntentLink[] = [
  * purpose — a scaffold update resets it to false (self-healing if Phase 2
  * never ran).
  */
-export const INTENTS_PENDING = true;
+export const INTENTS_PENDING = false;
 
 /**
  * When the Phase-1 bundle was deployed (ISO, set by the service together with
